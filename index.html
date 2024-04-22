@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta property="og:image" content="image/logo.jpg">
+  <meta name="viewport" content="width=device-width initial-scale=1">
+  <meta charset="UTF-8">
+  <title>Sub to unlock index</title>
+  <link rel="shortcut icon" type="image/x-icon" href="image/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap" rel="stylesheet">
+  <!-- bootstrap cdn -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body >
+  <div class="bg-animation">
+
+  </div>
+  <div style="background: #211f25 url('image/coffiecup.gif') no-repeat center;" id="loader">
+    <span id="spanloading">Loading...</span>
+  </div>
+  <div id="sec1">
+    <nav>
+      <a href='unlock%20link.html'><img src="image/logo.jpg" alt="no img"></a>
+      <span><a href="unlock%20link.html">Techno Focus</a></span>
+      <div class="nav-link" id="navLink">
+        <!-- <i class="fas fa-times-circle" onclick="hidemenu()"></i> -->
+        <ul id="navlist">
+          <li><a href="#">Home</a></li>
+          <li><a href="sign-in.html">Sign In</a></li>
+          <li><a href="about_us.html">About</a></li>
+        </ul>
+      </div>
+      <div class="BURGER" id="burger" onclick="menubtn()">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+      <!-- <i class="fas fa-bars" onclick="showmenu()"></i> -->
+    </nav>
+
+    <div class="container">
+      <form>
+        <h1>hello world</h1>
+        <div id="div1">
+          <input id="btn" type="button" name="hi" value="Subscribe">
+        </div>
+        <div id="div1">
+          <input id="btn2" type="button" name="hi" value="Unlock" onclick="window.open('https://github.com/NurAktar','_blank');" disabled>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- all scripts starts here -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+  $("#loader").delay(1500);
+  $(window).on("load",function(){
+    $("#loader").fadeOut("slow");
+  })
+  // var loader = document.getElementById('loader');
+  // function loaded(){
+  //   loader.style.display = 'none';
+  // }
+  //hide menu and show menu
+  var navLink = document.getElementById("navLink");
+  // function showmenu(){ navLink.style.right = "0"; }
+  // function hidemenu(){ navLink.style.right = "-51%"; }
+
+  var btn = document.getElementById('btn');
+  var btn2 = document.getElementById('btn2');
+
+  btn.onclick = function(){
+    window.open('https://www.youtube.com/channel/UCGFFUcAJp7d8crRm7k-WmHw?sub_confirmation=1','_blank');
+    setTimeout(function(){
+      btn2.disabled=false;
+      btn2.style.background="rgb(11, 159, 11)";
+      btn2.style.cursor="pointer";
+    },11000);
+  }
+  // burger toggle // menubar
+  var burger = document.getElementById("burger");
+  function menubtn(){
+    navLink.classList.toggle('panal');
+    burger.classList.toggle('toggle');
+
+  }
+
+
+
+  $(function(){setTimeout(function () {
+    navLink.classList.toggle('panal');
+  }, 3500);});
+
+
+
+  </script>
+</body>
+</html>
